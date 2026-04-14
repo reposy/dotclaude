@@ -6,7 +6,7 @@ This is my own setup. I share it because it works for me — feel free to adjust
 
 This repository collects the Claude Code configuration I want to reuse across every project I work on: guiding principles, subagents, hooks, and slash commands. Instead of copying files into each project, I clone this once and symlink `templates/dev/.claude` into each project's root. A single `git pull` updates every project that links to it.
 
-**Current stage: `stage-0` — Repository scaffold and meta guide**
+**Current stage: `stage-1` — User-facing project principles template**
 
 ## Installation
 
