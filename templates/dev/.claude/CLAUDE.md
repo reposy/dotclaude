@@ -44,6 +44,8 @@ Before announcing that a task is finished, review against these categories:
 - **Security** — Does it introduce any OWASP Top 10 vulnerabilities?
 - **Refactoring** — Is there refactoring that is necessary right now, or that would be strategically valuable given the current direction of the project? Perform it if the cost of deferring clearly outweighs the cost of doing it now. This does not override principle 5 — it applies only within the scope of the current task, not to unrelated surrounding code.
 
+When performing this self-review, invoke the `code-reviewer` subagent via the Task tool rather than reviewing inline. The subagent runs in isolated context and returns a structured report covering the five categories above. When invoking it, always provide the original user request (verbatim or briefly summarized) and a short description of what changed and why. For complex or ambiguous tasks, additionally provide your interpretation and plan, so the reviewer can verify that the implementation matches the user's intent.
+
 ## 7. Check git status before ending; confirm commit intent
 
 Before ending a response, run `git status`. If there are uncommitted changes, do not commit silently. Instead:
